@@ -8,8 +8,7 @@ import org.springframework.context.annotation.Import;
 @SpringBootTest
 class CatalogServiceApplicationTests {
 
-	@Test
-	void contextLoads() {  // checks whether the context can be loaded or not
-	}
-
+    @Test
+    void contextLoads() { // checks whether the context can be loaded or not
+    }
 }
