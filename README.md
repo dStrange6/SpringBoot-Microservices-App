@@ -1,1 +1,1 @@
-Book Store Project using microservices in springboot.
+Book Store Project using microservices in SpringBoot.
