@@ -6,7 +6,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -37,5 +40,10 @@ public class ProductService
                 productsPage.hasNext(),
                 productsPage.hasPrevious()
         );
+    }
+
+    public Optional<Product> getProductByCode(String code)
+    {
+        return productRepository.findByCode(code).map(ProductMapper::toProduct);
     }
 }
