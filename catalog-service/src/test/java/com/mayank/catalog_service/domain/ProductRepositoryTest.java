@@ -5,12 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.jdbc.Sql;
-import org.testcontainers.utility.TestcontainersConfiguration;
-
+import com.mayank.catalog_service.TestcontainersConfiguration;
+//import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import java.math.BigDecimal;
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
 // slice unit test for testing repository functionality
 @DataJpaTest(
         properties = {
@@ -25,6 +25,8 @@ class ProductRepositoryTest
     @Autowired
     private ProductRepository productRepository;
 
+    // You don't need to test the methods provided by Spring Data JPA.
+    // This test is to demonstrate how to write tests for the repository layer.
     @Test
     void shouldGetAllProducts()
     {
